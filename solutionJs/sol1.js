@@ -11,12 +11,31 @@ let displayBook = function() {
   return books
     .map(
       book =>
+
         `<li>The ${book.id} Written by ${book.author} and it is ${read(
           book
-        )}</li>`
+        )}<input type="checkbox" id=${book} onChange="changed()" ${chkbox(book)}> </li>`
+    
+      
     )
-    .join(" ");
+    .join(" ")
+
+    l
 };
+
+
+let chkbox = book => {
+  if (book.alreadyRead) {
+    return "checked";
+  } else {
+    return "unchecked";
+  }
+};
+
+let changed=(book)=>{
+    // document.getElementById(book.id)
+}
+
 
 let read = book => {
   if (book.alreadyRead) return "Read";
