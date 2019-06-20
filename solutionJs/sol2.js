@@ -19,17 +19,9 @@ const users = [
 
   let container = document.querySelector("#container");
   let input = document.querySelector("#key");
-  input.addEventListener("keyup", function(event) {
-    filterList(event.target.value);
-  });
 
-  let filterList = function(value) {
-    let filteredList = users
-      .map(user => user.name)
-      .filter(name => name.startsWith(value));
 
-    appendNode(filteredList);
-  };
+  
 
   let appendNode = function(list) {
     container.innerHTML = `
