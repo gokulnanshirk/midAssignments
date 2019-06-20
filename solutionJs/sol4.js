@@ -1,25 +1,27 @@
 class Calculator {
     constructor(a,b){
         
-        this.add(a,b)
-        this.sub(a,b)
-        this.mul(a,b)
-        this.div(a,b)
+        this.a=a;
+        this.b=b;
     }
 
-    add(a,b){
-        console.log("Addition is :",a+b) 
+    add(){
+        console.log("Addition is :",this.a+this.b) 
     }
-    sub(a,b){
-        console.log("subtraction is :",a-b) 
+    sub(){
+        console.log("subtraction is :",this.a-this.b) 
     }
-    mul(a,b){
-        console.log("Multiplication is :",a*b) 
+    mul(){
+        console.log("Multiplication is :",this.a*this.b) 
     }
-    div(a,b){
-        console.log("Division is :",a/b) 
+    div(){
+        console.log("Division is :",this.a/this.b) 
     }
 
 }
 
 let res=new Calculator(1,2)
+res.add()
+res.sub()
+res.mul()
+res.div()
